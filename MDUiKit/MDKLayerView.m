@@ -41,7 +41,16 @@
     UIColor* theBorderColor = self.borderColor;
     layer.borderColor = theBorderColor.CGColor;
     layer.shadowColor = self.shadowColor.CGColor;
-    layer.shadowOffset = CGSizeMake(self.shadowOffset.x, self.shadowOffset.y);
+    
+    CGSize shadowOffset;
+#if !TARGET_INTERFACE_BUILDER
+    //
+    shadowOffset = CGSizeMake(self.shadowOffset.x, self.shadowOffset.y);
+#else
+    // flip coord
+    shadowOffset = CGSizeMake(self.shadowOffset.x, -self.shadowOffset.y);
+#endif    
+    layer.shadowOffset = shadowOffset;
     layer.shadowOpacity = self.shadowOpacity;
     layer.shadowRadius = self.shadowRadius;
     layer.masksToBounds = self.maskToBounds;

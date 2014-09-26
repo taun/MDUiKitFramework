@@ -11,7 +11,17 @@
 @import UIKit;
 @import QuartzCore;
 
+@interface MDKLayerView ()
+@property (nonatomic,strong) CALayer*      imageLayer;
+@end
+
+
 @implementation MDKLayerView
+
++(Class) layerClass {
+    return [CAGradientLayer class];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -28,14 +38,57 @@
     return self;
 }
 
+-(CALayer*) imageLayer {
+    if (!_imageLayer) {
+        
+        _imageLayer = [CALayer new];
+        [self.layer addSublayer: _imageLayer];
+        
+        _imageLayer.contentsGravity = kCAGravityResize;
+        _imageLayer.opaque = NO;
+    }
+    _imageLayer.frame = self.layer.bounds;
+    return _imageLayer;
+}
+-(void) setBackgroundImage:(UIImage *)image {
+    if (_backgroundImage != image) {
+        _backgroundImage = image;
+        [self updateLayerProperties];
+    }
+}
+
+-(void) setStyleKitClass:(NSString *)styleKitClass {
+    if (_styleKitClass != styleKitClass) {
+        _styleKitClass = styleKitClass;
+    }
+}
+
+-(void) setStyleKitImageMethod:(NSString *)styleKitImageMethod {
+    if (_styleKitImageMethod != styleKitImageMethod) {
+        _styleKitImageMethod = styleKitImageMethod;
+        Class theClass = NSClassFromString(_styleKitClass);
+        SEL theMethod = NSSelectorFromString(_styleKitImageMethod);
+        if ([theClass respondsToSelector: theMethod]) {
+            self.backgroundImage = [theClass performSelector: theMethod];
+        }
+    }
+}
+
 -(void) layoutSubviews {
     [super layoutSubviews];
+
     [self updateLayerProperties];
 }
 
 -(void) updateLayerProperties {
-    CALayer* layer = self.layer;
+    CAGradientLayer* layer = (CAGradientLayer*)self.layer;
     layer.frame = CGRectInset(self.layer.frame, self.margin, self.margin);
+
+    if (self.gradientStartColor && self.gradientStopColor) {
+        layer.colors = @[(id)self.gradientStartColor.CGColor, (id)self.gradientStopColor.CGColor];
+    }
+    
+
     layer.cornerRadius = self.cornerRadius;
     layer.borderWidth = self.borderWidth;
     UIColor* theBorderColor = self.borderColor;
@@ -54,5 +107,7 @@
     layer.shadowOpacity = self.shadowOpacity;
     layer.shadowRadius = self.shadowRadius;
     layer.masksToBounds = self.maskToBounds;
+
+    self.imageLayer.contents = (__bridge id)(self.backgroundImage.CGImage);
 }
 @end

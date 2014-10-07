@@ -13,6 +13,12 @@
 		C5BC6AC019D3190C00BC1D1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BC6ABF19D3190C00BC1D1B /* UIKit.framework */; };
 		C5BC6AC419D3199200BC1D1B /* MDKLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BC6AC219D3199200BC1D1B /* MDKLayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5BC6AC519D3199200BC1D1B /* MDKLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BC6AC319D3199200BC1D1B /* MDKLayerView.m */; };
+		C5C92C6219E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C92C6019E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5C92C6319E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C92C6119E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.m */; };
+		C5C92C6619E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C92C6419E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5C92C6719E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C92C6519E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.m */; };
+		C5D6EA8819DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D6EA8619DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5D6EA8919DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6EA8719DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		C5BC6ABF19D3190C00BC1D1B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C5BC6AC219D3199200BC1D1B /* MDKLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDKLayerView.h; sourceTree = "<group>"; };
 		C5BC6AC319D3199200BC1D1B /* MDKLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDKLayerView.m; sourceTree = "<group>"; };
+		C5C92C6019E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDKUICollectionViewFlowLayoutDebug.h; sourceTree = "<group>"; };
+		C5C92C6119E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDKUICollectionViewFlowLayoutDebug.m; sourceTree = "<group>"; };
+		C5C92C6419E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDKUITableViewDynamicRowHeights.h; sourceTree = "<group>"; };
+		C5C92C6519E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDKUITableViewDynamicRowHeights.m; sourceTree = "<group>"; };
+		C5D6EA8619DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDKUICollectionViewScrollContentSized.h; sourceTree = "<group>"; };
+		C5D6EA8719DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDKUICollectionViewScrollContentSized.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,12 @@
 				C5BC6AA919D318E800BC1D1B /* MDUiKit.h */,
 				C5BC6AC219D3199200BC1D1B /* MDKLayerView.h */,
 				C5BC6AC319D3199200BC1D1B /* MDKLayerView.m */,
+				C5D6EA8619DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.h */,
+				C5D6EA8719DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.m */,
+				C5C92C6019E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.h */,
+				C5C92C6119E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.m */,
+				C5C92C6419E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.h */,
+				C5C92C6519E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.m */,
 			);
 			path = MDUiKit;
 			sourceTree = "<group>";
@@ -120,6 +138,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5BC6AC419D3199200BC1D1B /* MDKLayerView.h in Headers */,
+				C5D6EA8819DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.h in Headers */,
+				C5C92C6219E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.h in Headers */,
+				C5C92C6619E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.h in Headers */,
 				C5BC6AAA19D318E800BC1D1B /* MDUiKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +242,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5D6EA8919DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.m in Sources */,
+				C5C92C6319E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.m in Sources */,
+				C5C92C6719E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.m in Sources */,
 				C5BC6AC519D3199200BC1D1B /* MDKLayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

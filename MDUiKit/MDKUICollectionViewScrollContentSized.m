@@ -33,6 +33,9 @@
                                                                 attribute: NSLayoutAttributeNotAnAttribute
                                                                multiplier: 1.0
                                                                  constant: 26.0];
+        // Priority 999 seems necessary to stop autolayout constraint conflicts between desired height and UIView-Encapsulated-Layout-Height set by table class.
+        _currentHeightConstraint.priority = 999.0;
+
         [self addConstraint: _currentHeightConstraint];
     }
     return _currentHeightConstraint;
@@ -63,6 +66,6 @@
     
     // change constraints above
     [super updateConstraints];
-    NSString* constraintsString = [self.constraints description];
+//    NSString* constraintsString = [self.constraints description];
 }
 @end

@@ -19,5 +19,5 @@ FOUNDATION_EXPORT const unsigned char MDUiKitVersionString[];
 #import <MDUiKit/MDKLayerView.h>
 #import <MDUiKit/MDKUICollectionViewScrollContentSized.h>
 #import <MDUiKit/MDKUICollectionViewFlowLayoutDebug.h>
-
+#import <MDUiKit/UICollectionView+MDKDragAndDrop.h>
 

@@ -25,5 +25,13 @@ IB_DESIGNABLE
 @property (nonatomic,assign) IBInspectable UIColor*       shadowColor;
 @property (nonatomic,assign) IBInspectable CGFloat        shadowOpacity;
 @property (nonatomic,assign) IBInspectable CGFloat        shadowRadius;
+
+@property (nonatomic,strong) IBInspectable UIColor*       gradientStartColor;
+@property (nonatomic,strong) IBInspectable UIColor*       gradientStopColor;
+
+@property (nonatomic,strong) IBInspectable UIImage*       backgroundImage;
+@property (nonatomic,strong) IBInspectable NSString*      styleKitClass;
+@property (nonatomic,strong) IBInspectable NSString*      styleKitImageMethod;
+
 @end
 

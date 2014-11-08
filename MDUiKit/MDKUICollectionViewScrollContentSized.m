@@ -24,27 +24,22 @@
     [super awakeFromNib];
     self.translatesAutoresizingMaskIntoConstraints = NO;
     //    self.scrollEnabled = NO;
-    self.currentHeightConstraint.constant = 44.0;
-}
--(void) initialConstraints {
     
+    [self configureConstraints];
 }
--(NSLayoutConstraint*) currentHeightConstraint {
-    if (!_currentHeightConstraint) {
-        _currentHeightConstraint = [NSLayoutConstraint constraintWithItem: self
-                                                                attribute: NSLayoutAttributeHeight
-                                                                relatedBy: NSLayoutRelationEqual
-                                                                   toItem: nil
-                                                                attribute: NSLayoutAttributeNotAnAttribute
-                                                               multiplier: 1.0
-                                                                 constant: 26.0];
-        // Priority 999 seems necessary to stop autolayout constraint conflicts between desired height and UIView-Encapsulated-Layout-Height set by table class.
-        // 999 vs 1000 makes no difference in end result.
-        _currentHeightConstraint.priority = 999;
-
-        [self addConstraint: _currentHeightConstraint];
-    }
-    return _currentHeightConstraint;
+-(void) configureConstraints {
+    CGFloat currentHeight = self.bounds.size.height;
+    _currentHeightConstraint = [NSLayoutConstraint constraintWithItem: self
+                                                            attribute: NSLayoutAttributeHeight
+                                                            relatedBy: NSLayoutRelationEqual
+                                                               toItem: nil
+                                                            attribute: NSLayoutAttributeNotAnAttribute
+                                                           multiplier: 1.0
+                                                             constant: currentHeight];
+    // Priority 999 seems necessary to stop autolayout constraint conflicts between desired height and UIView-Encapsulated-Layout-Height set by table class.
+    _currentHeightConstraint.priority = 999;
+    
+    [self addConstraint: _currentHeightConstraint];
 }
 //-(CGSize)sizeThatFits:(CGSize)size {
 //    CGSize bestSize = CGSizeMake(size.width, self.contentSize.height);

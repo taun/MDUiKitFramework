@@ -42,6 +42,7 @@
 }
 
 -(void)layoutSubviews {
+    [super layoutSubviews];
     CGFloat frameHeight = self.frame.size.height;
     
     if (self.contentSize.height != self.currentHeightConstraint.constant) {
@@ -51,7 +52,6 @@
         // update superview
         [self.superview.superview setNeedsLayout];
     }
-    [super layoutSubviews];
 }
 
 -(void)updateConstraints {

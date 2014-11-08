@@ -15,15 +15,32 @@
 
 @implementation MDKUICollectionViewScrollContentSized
 
--(NSInteger) numberOfItems {
-    NSInteger items = [self numberOfItemsInSection: 0];
-    return items;
-}
-
 -(void) awakeFromNib {
     [super awakeFromNib];
 }
+#pragma message "Can we just use setNeedsUpdateConstraints here then check at the delegate level? Reload cell if needsUpdate..."
+-(BOOL) nextItemWillWrapLine {
+    BOOL willWrap = NO;
+    
+    CGFloat cellWidth = self.bounds.size.width;
+    UICollectionViewFlowLayout* layout = (UICollectionViewFlowLayout*)self.collectionViewLayout;
+    NSInteger itemsPerLine = (cellWidth / (layout.itemSize.width+layout.minimumInteritemSpacing));
+    NSInteger items = [self numberOfItemsInSection: 0];
+    CGFloat remainder = fmodf(items, itemsPerLine);
+    if (remainder == 0.0) {
+        // flag to relayout collection with additional row
+        willWrap = YES;
+    }
+    
+    return willWrap;
+}
+-(BOOL) willScrollVertically {
 
+    CGFloat boundsHeight = self.bounds.size.height;
+    CGFloat contentHeight = self.contentSize.height;
+    
+    return (boundsHeight > 0 && boundsHeight < contentHeight);
+}
 -(NSLayoutConstraint*) currentHeightConstraint {
     if (!_currentHeightConstraint) {
         _currentHeightConstraint = [NSLayoutConstraint constraintWithItem: self

@@ -22,7 +22,7 @@ IB_DESIGNABLE
 @property (nonatomic,assign) IBInspectable CGFloat        borderWidth;
 @property (nonatomic,strong) IBInspectable UIColor*       borderColor;
 @property (nonatomic,assign) IBInspectable CGPoint        shadowOffset;
-@property (nonatomic,assign) IBInspectable UIColor*       shadowColor;
+@property (nonatomic,strong) IBInspectable UIColor*       shadowColor;
 @property (nonatomic,assign) IBInspectable CGFloat        shadowOpacity;
 @property (nonatomic,assign) IBInspectable CGFloat        shadowRadius;
 

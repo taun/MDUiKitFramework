@@ -93,7 +93,8 @@
     layer.borderWidth = self.borderWidth;
     UIColor* theBorderColor = self.borderColor;
     layer.borderColor = theBorderColor.CGColor;
-    layer.shadowColor = self.shadowColor.CGColor;
+    UIColor* theShadowColor = self.shadowColor;
+    layer.shadowColor = theShadowColor.CGColor;
     
     CGSize shadowOffset;
 #if !TARGET_INTERFACE_BUILDER

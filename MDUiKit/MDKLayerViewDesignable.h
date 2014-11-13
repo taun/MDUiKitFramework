@@ -1,5 +1,5 @@
 //
-//  MDKLayerView.h
+//  MDKLayerViewDesignable.h
 //  MDUiKit
 //
 //  Created by Taun Chapman on 09/24/14.
@@ -15,7 +15,7 @@ IB_DESIGNABLE
  UIView subclass which exposes the layer properties to Interface Builder for designing a theme.
  In particular used to give views a border with round corners.
  */
-@interface MDKLayerView : UIView
+@interface MDKLayerViewDesignable : UIView
 @property (nonatomic,assign) IBInspectable BOOL           maskToBounds;
 @property (nonatomic,assign) IBInspectable CGFloat        margin;
 @property (nonatomic,assign) IBInspectable CGFloat        cornerRadius;

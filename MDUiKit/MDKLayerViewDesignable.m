@@ -1,22 +1,22 @@
 //
-//  MDKLayerView.m
+//  MDKLayerViewDesignable.m
 //  MDUiKit
 //
 //  Created by Taun Chapman on 09/24/14.
 //  Copyright (c) 2014 MOEDAE LLC. All rights reserved.
 //
 
-#import "MDKLayerView.h"
+#import "MDKLayerViewDesignable.h"
 
 @import UIKit;
 @import QuartzCore;
 
-@interface MDKLayerView ()
+@interface MDKLayerViewDesignable ()
 @property (nonatomic,strong) CALayer*      imageLayer;
 @end
 
 
-@implementation MDKLayerView
+@implementation MDKLayerViewDesignable
 
 +(Class) layerClass {
     return [CAGradientLayer class];
@@ -63,6 +63,9 @@
     }
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+
 -(void) setStyleKitImageMethod:(NSString *)styleKitImageMethod {
     if (_styleKitImageMethod != styleKitImageMethod) {
         _styleKitImageMethod = styleKitImageMethod;
@@ -73,6 +76,7 @@
         }
     }
 }
+#pragma clang diagnostic pop
 
 -(void) layoutSubviews {
     [super layoutSubviews];

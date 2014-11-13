@@ -19,11 +19,11 @@
         NSIndexPath* lastItemIndexPath = [NSIndexPath indexPathForRow: lastCellRow inSection: section];
         NSIndexPath* lastItemPlusOneIndexPath = [NSIndexPath indexPathForRow: lastCellRow+1 inSection: section];
 
-        NSInteger itemSpacing = 0;
-        UICollectionViewFlowLayout* layout = (UICollectionViewFlowLayout*)self.collectionViewLayout;
-        if ([layout isKindOfClass:[UICollectionViewFlowLayout class]]) {
-            itemSpacing = layout.minimumInteritemSpacing;
-        }
+//        NSInteger itemSpacing = 0;
+//        UICollectionViewFlowLayout* layout = (UICollectionViewFlowLayout*)self.collectionViewLayout;
+//        if ([layout isKindOfClass:[UICollectionViewFlowLayout class]]) {
+//            itemSpacing = layout.minimumInteritemSpacing;
+//        }
         
         UICollectionViewLayoutAttributes* lastItemAttrs = [self layoutAttributesForItemAtIndexPath: lastItemIndexPath];
         CGRect lastItemFrame = lastItemAttrs.frame;

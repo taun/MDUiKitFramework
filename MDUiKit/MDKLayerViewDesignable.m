@@ -8,8 +8,6 @@
 
 #import "MDKLayerViewDesignable.h"
 
-@import UIKit;
-@import QuartzCore;
 
 @interface MDKLayerViewDesignable ()
 @property (nonatomic,strong) CALayer*      imageLayer;

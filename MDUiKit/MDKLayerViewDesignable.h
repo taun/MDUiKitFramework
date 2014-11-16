@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@import QuartzCore;
+
 IB_DESIGNABLE
 
 

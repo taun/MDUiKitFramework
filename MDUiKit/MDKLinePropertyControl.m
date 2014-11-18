@@ -112,7 +112,7 @@
     _dialLayer.frame = self.layer.bounds;
     if (!_dialImage || !CGSizeEqualToSize(_dialImage.size, _dialLayer.bounds.size)) {
         UIGraphicsBeginImageContextWithOptions(_dialLayer.bounds.size, NO, 0.0f);
-        [self drawDialLayerInFrame: _dialLayer.bounds];
+        [self drawDialLayerSize: _dialLayer.bounds.size];
         
         _dialImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
@@ -123,19 +123,21 @@
     _lineAngleLayer.frame = self.layer.bounds;
     if (!_angleControlImage || !CGSizeEqualToSize(_angleControlImage.size, _lineAngleLayer.bounds.size)) {
         UIGraphicsBeginImageContextWithOptions(_lineAngleLayer.bounds.size, NO, 0.0f);
-        [self drawAngleControlImageInFrame: _lineAngleLayer.bounds];
+        [self drawAngleControlImageSize: _lineAngleLayer.bounds.size];
         
         _angleControlImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         _lineAngleLayer.contents = (__bridge id)(_angleControlImage.CGImage);
     }
 }
--(void) drawDialLayerInFrame: (CGRect) frame {
+-(void) drawDialLayerSize: (CGSize) size {
 
+    float scale = size.width/350.0;
+    
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     //// OuterCircle Drawing
-    UIBezierPath* outerCirclePath = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(CGRectGetMinX(frame) + 82.5, CGRectGetMinY(frame) + 82.5, 185, 185)];
+    UIBezierPath* outerCirclePath = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(scale*82.5, scale*82.5, scale*185, scale*185)];
     [UIColor.lightGrayColor setStroke];
     outerCirclePath.lineWidth = 3;
     [outerCirclePath stroke];
@@ -143,11 +145,11 @@
     
     //// ZeroDegreeTick Drawing
     CGContextSaveGState(context);
-    CGContextTranslateCTM(context, CGRectGetMinX(frame) + 175, CGRectGetMinY(frame) + 175);
+    CGContextTranslateCTM(context, scale*175, scale*175);
     
     UIBezierPath* zeroDegreeTickPath = UIBezierPath.bezierPath;
-    [zeroDegreeTickPath moveToPoint: CGPointMake(93, 0)];
-    [zeroDegreeTickPath addLineToPoint: CGPointMake(83, 0)];
+    [zeroDegreeTickPath moveToPoint: CGPointMake(scale*93, 0)];
+    [zeroDegreeTickPath addLineToPoint: CGPointMake(scale*83, 0)];
     [UIColor.grayColor setStroke];
     zeroDegreeTickPath.lineWidth = 2;
     [zeroDegreeTickPath stroke];
@@ -165,12 +167,12 @@
         float length = ninety*4 + fortyfive*3 + fifteen*3;
         //// NinetyDegreeTick Drawing
         CGContextSaveGState(context);
-        CGContextTranslateCTM(context, CGRectGetMinX(frame) + 175, CGRectGetMinY(frame) + 175);
+        CGContextTranslateCTM(context, scale*175, scale*175);
         CGContextRotateCTM(context, angle * M_PI / 180);
         
         UIBezierPath* ninetyDegreeTickPath = UIBezierPath.bezierPath;
-        [ninetyDegreeTickPath moveToPoint: CGPointMake(93, 0)];
-        [ninetyDegreeTickPath addLineToPoint: CGPointMake(93-length, 0)];
+        [ninetyDegreeTickPath moveToPoint: CGPointMake(scale*93, 0)];
+        [ninetyDegreeTickPath addLineToPoint: CGPointMake(scale*(93-length), 0)];
         [UIColor.grayColor setStroke];
         ninetyDegreeTickPath.lineWidth = tickWidth;
         [ninetyDegreeTickPath stroke];
@@ -180,11 +182,14 @@
     
 }
 
--(void) drawAngleControlImageInFrame: (CGRect) frame {
+-(void) drawAngleControlImageSize: (CGSize) size {
+
+    float scale = size.width/350.0;
+
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     //// AngleDragCircle Drawing
-    UIBezierPath* angleDragCirclePath = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(CGRectGetMinX(frame) + 252.5, CGRectGetMinY(frame) + 158.5, 32, 32)];
+    UIBezierPath* angleDragCirclePath = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(scale*252.5, scale*158.5, scale*32, scale*32)];
     [_white70 setFill];
     [angleDragCirclePath fill];
     CGContextSaveGState(context);

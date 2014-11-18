@@ -16,9 +16,13 @@ FOUNDATION_EXPORT const unsigned char MDUiKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <MDUiKit/PublicHeader.h>
 
-#import <MDUiKit/MDKLayerView.h>
+#import <MDUiKit/MDKLayerViewDesignable.h>
 #import <MDUiKit/MDKUICollectionViewScrollContentSized.h>
 #import <MDUiKit/MDKUICollectionViewFlowLayoutDebug.h>
 #import <MDUiKit/UICollectionView+MDKDragAndDrop.h>
 #import <MDUiKit/MDKUITableViewDynamicRowHeights.h>
+<<<<<<< HEAD
 
+=======
+#import <MDUiKit/MDKLinePropertyControl.h>
+>>>>>>> DetachedHeadDial

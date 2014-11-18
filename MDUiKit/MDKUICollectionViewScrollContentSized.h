@@ -18,5 +18,14 @@
 @interface MDKUICollectionViewScrollContentSized : UICollectionView
 
 @property (nonatomic,strong) NSLayoutConstraint* currentHeightConstraint;
-
+/*!
+ Whether the current number of items fills the view width and the next item will wrap.
+ NOTE: hard coded for section zero! Assumes only ever 1 section.
+ */
+@property (nonatomic,readonly) BOOL                 nextItemWillWrapLine;
+/*!
+ Whether the contentHeigh is larger than the bounds and so the collection will scroll vertically.
+ Not related to enabling or disabling scrolling.
+ */
+@property (nonatomic,readonly) BOOL                 willScrollVertically;
 @end

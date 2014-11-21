@@ -21,8 +21,4 @@ FOUNDATION_EXPORT const unsigned char MDUiKitVersionString[];
 #import <MDUiKit/MDKUICollectionViewFlowLayoutDebug.h>
 #import <MDUiKit/UICollectionView+MDKDragAndDrop.h>
 #import <MDUiKit/MDKUITableViewDynamicRowHeights.h>
-<<<<<<< HEAD
-
-=======
 #import <MDUiKit/MDKLinePropertyControl.h>
->>>>>>> DetachedHeadDial

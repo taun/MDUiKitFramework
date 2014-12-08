@@ -10,7 +10,7 @@
 
 @import QuartzCore;
 
-IB_DESIGNABLE
+//IB_DESIGNABLE
 
 
 /*!

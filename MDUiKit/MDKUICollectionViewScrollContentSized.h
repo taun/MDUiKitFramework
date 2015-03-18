@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 MOEDAE LLC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 /*!
  Subclass to make UICollectionView show the full contentView when embedded in another views scrollview.

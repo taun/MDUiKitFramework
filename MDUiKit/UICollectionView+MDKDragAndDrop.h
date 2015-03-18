@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 MOEDAE LLC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 /*!
  Category to add extra drag and drop convenience methods.

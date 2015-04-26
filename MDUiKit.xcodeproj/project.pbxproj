@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5124B281AEC36330015FF81 /* NSString+MDKConvenience.h in Headers */ = {isa = PBXBuildFile; fileRef = C5124B261AEC36330015FF81 /* NSString+MDKConvenience.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5124B291AEC36330015FF81 /* NSString+MDKConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = C5124B271AEC36330015FF81 /* NSString+MDKConvenience.m */; };
 		C5BC6AAA19D318E800BC1D1B /* MDUiKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C5BC6AA919D318E800BC1D1B /* MDUiKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5BC6AB419D318E800BC1D1B /* MDUiKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BC6AB319D318E800BC1D1B /* MDUiKitTests.m */; };
 		C5BC6ABE19D3190500BC1D1B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BC6ABD19D3190500BC1D1B /* QuartzCore.framework */; };
@@ -21,13 +23,15 @@
 		C5D6EA8919DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6EA8719DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.m */; };
 		C5DA47EC19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = C5DA47EA19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5DA47ED19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DA47EB19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.m */; };
-		C5DA47F019EEDC6100A0A432 /* NSMutableArray+MDKConvenience.h in Headers */ = {isa = PBXBuildFile; fileRef = C5DA47EE19EEDC6100A0A432 /* NSMutableArray+MDKConvenience.h */; };
+		C5DA47F019EEDC6100A0A432 /* NSMutableArray+MDKConvenience.h in Headers */ = {isa = PBXBuildFile; fileRef = C5DA47EE19EEDC6100A0A432 /* NSMutableArray+MDKConvenience.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5DA47F119EEDC6100A0A432 /* NSMutableArray+MDKConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DA47EF19EEDC6100A0A432 /* NSMutableArray+MDKConvenience.m */; };
 		C5F090381A184236009ADC95 /* MDKLinePropertyControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C5F090361A184236009ADC95 /* MDKLinePropertyControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5F090391A184236009ADC95 /* MDKLinePropertyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F090371A184236009ADC95 /* MDKLinePropertyControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C5124B261AEC36330015FF81 /* NSString+MDKConvenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MDKConvenience.h"; sourceTree = "<group>"; };
+		C5124B271AEC36330015FF81 /* NSString+MDKConvenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MDKConvenience.m"; sourceTree = "<group>"; };
 		C5BC6AA419D318E800BC1D1B /* MDUiKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MDUiKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BC6AA819D318E800BC1D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5BC6AA919D318E800BC1D1B /* MDUiKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDUiKit.h; sourceTree = "<group>"; };
@@ -72,6 +76,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C5124B251AEC35BC0015FF81 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C5DA47EE19EEDC6100A0A432 /* NSMutableArray+MDKConvenience.h */,
+				C5DA47EF19EEDC6100A0A432 /* NSMutableArray+MDKConvenience.m */,
+				C5124B261AEC36330015FF81 /* NSString+MDKConvenience.h */,
+				C5124B271AEC36330015FF81 /* NSString+MDKConvenience.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		C5BC6A9A19D318E800BC1D1B = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +109,7 @@
 		C5BC6AA619D318E800BC1D1B /* MDUiKit */ = {
 			isa = PBXGroup;
 			children = (
+				C5124B251AEC35BC0015FF81 /* Categories */,
 				C5F090351A184209009ADC95 /* Controls */,
 				C5BC6AA719D318E800BC1D1B /* Supporting Files */,
 				C5BC6AA919D318E800BC1D1B /* MDUiKit.h */,
@@ -107,8 +123,6 @@
 				C5C92C6519E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.m */,
 				C5DA47EA19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.h */,
 				C5DA47EB19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.m */,
-				C5DA47EE19EEDC6100A0A432 /* NSMutableArray+MDKConvenience.h */,
-				C5DA47EF19EEDC6100A0A432 /* NSMutableArray+MDKConvenience.m */,
 			);
 			path = MDUiKit;
 			sourceTree = "<group>";
@@ -166,10 +180,11 @@
 				C5BC6AAA19D318E800BC1D1B /* MDUiKit.h in Headers */,
 				C5BC6AC419D3199200BC1D1B /* MDKLayerViewDesignable.h in Headers */,
 				C5D6EA8819DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.h in Headers */,
-				C5DA47F019EEDC6100A0A432 /* NSMutableArray+MDKConvenience.h in Headers */,
 				C5C92C6219E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.h in Headers */,
 				C5F090381A184236009ADC95 /* MDKLinePropertyControl.h in Headers */,
+				C5124B281AEC36330015FF81 /* NSString+MDKConvenience.h in Headers */,
 				C5DA47EC19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.h in Headers */,
+				C5DA47F019EEDC6100A0A432 /* NSMutableArray+MDKConvenience.h in Headers */,
 				C5C92C6619E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5124B291AEC36330015FF81 /* NSString+MDKConvenience.m in Sources */,
 				C5DA47F119EEDC6100A0A432 /* NSMutableArray+MDKConvenience.m in Sources */,
 				C5DA47ED19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.m in Sources */,
 				C5D6EA8919DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.m in Sources */,

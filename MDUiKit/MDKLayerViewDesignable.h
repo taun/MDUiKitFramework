@@ -6,9 +6,10 @@
 //  Copyright (c) 2014 MOEDAE LLC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+
 
 @import QuartzCore;
+@import UIKit;
 
 IB_DESIGNABLE
 

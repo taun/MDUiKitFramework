@@ -104,7 +104,7 @@
     [self updateAngleControlLayer];
 }
 -(void) drawRect:(CGRect)rect {
-    CGContextRef context = UIGraphicsGetCurrentContext();
+//    CGContextRef context = UIGraphicsGetCurrentContext();
     
 }
 

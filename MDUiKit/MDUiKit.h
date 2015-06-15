@@ -24,3 +24,4 @@ FOUNDATION_EXPORT const unsigned char MDUiKitVersionString[];
 #import <MDUiKit/NSString+MDKConvenience.h>
 #import <MDUiKit/MDKLinePropertyControl.h>
 #import <MDUiKit/NSMutableArray+MDKConvenience.h>
+#import <MDUiKit/UIFont+MDKProportional.h>

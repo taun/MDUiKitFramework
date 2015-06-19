@@ -8,6 +8,8 @@
 
 @implementation UIFont (MDKProportional)
 
+// https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW74
+
 +(UIFont*)proportionalForExistingFont: (UIFont*)existingFont
 {
 UIFontDescriptor *const existingDescriptor = [existingFont fontDescriptor];

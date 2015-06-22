@@ -52,7 +52,7 @@
 
 -(BOOL)isNonEmptyString
 {
-    return (self && [self stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceCharacterSet]].length > 0);
+    return ([self stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceCharacterSet]].length > 0);
 }
 
 @end

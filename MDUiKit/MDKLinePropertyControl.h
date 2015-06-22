@@ -12,6 +12,11 @@
 
 IB_DESIGNABLE
 
+/*!
+ Unused?
+ 
+ Was intended for fractalScapes control to specify the turtle line.
+ */
 @interface MDKLinePropertyControl : UIControl
 
 @property (nonatomic,assign) IBInspectable float          minLengthValue;

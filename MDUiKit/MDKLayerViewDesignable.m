@@ -82,6 +82,11 @@
     [self updateLayerProperties];
 }
 
+-(void)updateConstraints
+{
+    [super updateConstraints];
+}
+
 -(void) updateLayerProperties {
     CAGradientLayer* layer = (CAGradientLayer*)self.layer;
     layer.frame = CGRectInset(self.layer.frame, self.margin, self.margin);

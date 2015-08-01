@@ -55,4 +55,62 @@
     return ([self stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceCharacterSet]].length > 0);
 }
 
+-(NSArray *)arrayFromCommaSeparatedPossiblyQuotedString
+{
+    NSArray* rVal;
+    
+    if (self.length > 0)
+    {
+        NSString* withoutQuotes = [self stringByReplacingOccurrencesOfString: @"\"" withString: @""];
+        NSArray* tempArray = [withoutQuotes componentsSeparatedByString: @","];
+        NSMutableArray* trimmedArray = [NSMutableArray arrayWithCapacity: tempArray.count];
+        
+        for (NSString* item in tempArray)
+        {
+            [trimmedArray addObject: [item stringByTrimmingCharactersInSet:[ NSCharacterSet whitespaceCharacterSet]]];
+        }
+        
+        rVal = [trimmedArray copy];
+    }
+    return rVal;
+}
+
+-(NSArray *)arrayFromSpaceSeparatedString
+{
+    NSArray* rVal;
+    
+    if (self.length > 0)
+    {
+        NSArray* tempArray = [self componentsSeparatedByCharactersInSet: [NSCharacterSet whitespaceCharacterSet]];
+        NSMutableArray* culledArray = [NSMutableArray arrayWithCapacity: tempArray.count];
+        
+        for (NSString* item in tempArray)
+        {
+            if (item && item.length > 0)
+            {
+                [culledArray addObject: item];
+            }
+        }
+        
+        rVal = [culledArray copy];
+    }
+    return rVal;
+}
+
+-(NSNumber *)doubleNumberOrNil
+{
+    NSNumber* numVal;
+    if (self.length > 0) numVal = [NSNumber numberWithDouble: [self doubleValue]];
+    
+    return numVal;
+}
+
+-(NSNumber *)integerNumberOrNil
+{
+    NSNumber* numVal;
+    if (self.length > 0) numVal = [NSNumber numberWithDouble: [self integerValue]];
+    
+    return numVal;
+}
+
 @end

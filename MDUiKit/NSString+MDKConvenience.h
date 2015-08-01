@@ -38,4 +38,18 @@
  */
 -(BOOL)isNonEmptyString;
 
+-(NSArray*)arrayFromCommaSeparatedPossiblyQuotedString;
+-(NSArray *)arrayFromSpaceSeparatedString;
+/*!
+ Converts string to an NSNumber.
+ 
+ @return Nil if the string is zero length. Zero if string is invalid number.
+ */
+-(NSNumber*)doubleNumberOrNil;
+/*!
+ Converts string to an NSNumber.
+ 
+ @return Nil if the string is zero length. Zero if string is invalid number.
+ */
+-(NSNumber*)integerNumberOrNil;
 @end

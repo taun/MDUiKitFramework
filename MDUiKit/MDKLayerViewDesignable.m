@@ -36,6 +36,50 @@
     return self;
 }
 
+- (void)prepareForInterfaceBuilder
+{
+    [self updateLayerProperties];
+    [self setNeedsDisplay];
+}
+
+-(void)setMaskToBounds:(BOOL)maskToBounds
+{
+    if (_maskToBounds != maskToBounds)
+    {
+        _maskToBounds = maskToBounds;
+        self.layer.masksToBounds = _maskToBounds;
+        [self setNeedsDisplay];
+    }
+}
+
+-(void)setShadowOffset:(CGSize)shadowOffset
+{
+    _shadowOffset = shadowOffset;
+    self.layer.shadowOffset = shadowOffset;
+    [self setNeedsDisplay];
+}
+
+-(void)setShadowColor:(UIColor *)shadowColor
+{
+    _shadowColor = shadowColor;
+    self.layer.shadowColor = shadowColor.CGColor;
+    [self setNeedsDisplay];
+}
+
+-(void)setShadowRadius:(CGFloat)shadowRadius
+{
+    _shadowRadius = shadowRadius;
+    self.layer.shadowRadius = shadowRadius;
+    [self setNeedsDisplay];
+}
+
+-(void)setShadowOpacity:(CGFloat)shadowOpacity
+{
+    _shadowOpacity = shadowOpacity;
+    self.layer.shadowOpacity = shadowOpacity;
+    [self setNeedsDisplay];
+}
+
 -(CALayer*) imageLayer {
     if (!_imageLayer) {
         
@@ -106,10 +150,10 @@
     CGSize shadowOffset;
 #if !TARGET_INTERFACE_BUILDER
     //
-    shadowOffset = CGSizeMake(self.shadowOffset.x, self.shadowOffset.y);
+    shadowOffset = CGSizeMake(self.shadowOffset.width, self.shadowOffset.height);
 #else
     // flip coord
-    shadowOffset = CGSizeMake(self.shadowOffset.x, -self.shadowOffset.y);
+    shadowOffset = CGSizeMake(self.shadowOffset.width, -self.shadowOffset.height);
 #endif    
     layer.shadowOffset = shadowOffset;
     layer.shadowOpacity = self.shadowOpacity;

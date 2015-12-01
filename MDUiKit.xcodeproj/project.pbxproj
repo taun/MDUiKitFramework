@@ -25,6 +25,7 @@
 		C5C92C6319E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C92C6119E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.m */; };
 		C5C92C6619E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C92C6419E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5C92C6719E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C92C6519E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.m */; };
+		C5C9A9C31C0E216100A13E59 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C9A9C21C0E216100A13E59 /* Crashlytics.framework */; };
 		C5D6EA8819DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D6EA8619DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5D6EA8919DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6EA8719DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.m */; };
 		C5DA47EC19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.h in Headers */ = {isa = PBXBuildFile; fileRef = C5DA47EA19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,6 +58,7 @@
 		C5C92C6119E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDKUICollectionViewFlowLayoutDebug.m; sourceTree = "<group>"; };
 		C5C92C6419E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDKUITableViewDynamicRowHeights.h; sourceTree = "<group>"; };
 		C5C92C6519E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDKUITableViewDynamicRowHeights.m; sourceTree = "<group>"; };
+		C5C9A9C21C0E216100A13E59 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ../../Crashlytics.framework; sourceTree = "<group>"; };
 		C5D6EA8619DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDKUICollectionViewScrollContentSized.h; sourceTree = "<group>"; };
 		C5D6EA8719DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDKUICollectionViewScrollContentSized.m; sourceTree = "<group>"; };
 		C5DA47EA19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+MDKDragAndDrop.h"; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			files = (
 				C5A6E5CB1B2F09C10038B0B0 /* CoreText.framework in Frameworks */,
 				C5BC6AC019D3190C00BC1D1B /* UIKit.framework in Frameworks */,
+				C5C9A9C31C0E216100A13E59 /* Crashlytics.framework in Frameworks */,
 				C5BC6ABE19D3190500BC1D1B /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +182,7 @@
 		C5BC6AC119D3193900BC1D1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5C9A9C21C0E216100A13E59 /* Crashlytics.framework */,
 				C5A6E5CA1B2F09C10038B0B0 /* CoreText.framework */,
 				C5BC6ABD19D3190500BC1D1B /* QuartzCore.framework */,
 				C5BC6ABF19D3190C00BC1D1B /* UIKit.framework */,

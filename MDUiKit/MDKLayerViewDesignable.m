@@ -38,6 +38,7 @@
 
 - (void)prepareForInterfaceBuilder
 {
+    [super prepareForInterfaceBuilder];
     [self updateLayerProperties];
     [self setNeedsDisplay];
 }

@@ -52,4 +52,5 @@
  @return Nil if the string is zero length. Zero if string is invalid number.
  */
 -(NSNumber*)integerNumberOrNil;
+
 @end

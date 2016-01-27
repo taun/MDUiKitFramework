@@ -12,6 +12,11 @@
 		C53A87BE1C03E34000261120 /* MDKCelsiusToFahrenheitValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = C53A87BC1C03E34000261120 /* MDKCelsiusToFahrenheitValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C53A87BF1C03E34000261120 /* MDKCelsiusToFahrenheitValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = C53A87BD1C03E34000261120 /* MDKCelsiusToFahrenheitValueTransformer.m */; };
 		C53A87C01C03E34000261120 /* MDKCelsiusToFahrenheitValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = C53A87BD1C03E34000261120 /* MDKCelsiusToFahrenheitValueTransformer.m */; };
+		C5A5CF1E1C57E9FB00D23C80 /* MDUiKitTimePeriodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A5CF1D1C57E9FB00D23C80 /* MDUiKitTimePeriodTests.m */; };
+		C5A5CF221C583AE300D23C80 /* MDKTimePeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = C5A5CF201C583AE300D23C80 /* MDKTimePeriod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5A5CF231C583AE300D23C80 /* MDKTimePeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A5CF211C583AE300D23C80 /* MDKTimePeriod.m */; };
+		C5A5CF241C583AE300D23C80 /* MDKTimePeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A5CF211C583AE300D23C80 /* MDKTimePeriod.m */; };
+		C5A5CF261C58489400D23C80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A5CF251C58489400D23C80 /* Foundation.framework */; };
 		C5A6E5C81B2F059B0038B0B0 /* UIFont+MDKProportional.h in Headers */ = {isa = PBXBuildFile; fileRef = C5A6E5C61B2F059B0038B0B0 /* UIFont+MDKProportional.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5A6E5C91B2F059B0038B0B0 /* UIFont+MDKProportional.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6E5C71B2F059B0038B0B0 /* UIFont+MDKProportional.m */; };
 		C5A6E5CB1B2F09C10038B0B0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A6E5CA1B2F09C10038B0B0 /* CoreText.framework */; };
@@ -41,6 +46,10 @@
 		C5124B271AEC36330015FF81 /* NSString+MDKConvenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MDKConvenience.m"; sourceTree = "<group>"; };
 		C53A87BC1C03E34000261120 /* MDKCelsiusToFahrenheitValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDKCelsiusToFahrenheitValueTransformer.h; sourceTree = "<group>"; };
 		C53A87BD1C03E34000261120 /* MDKCelsiusToFahrenheitValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDKCelsiusToFahrenheitValueTransformer.m; sourceTree = "<group>"; };
+		C5A5CF1D1C57E9FB00D23C80 /* MDUiKitTimePeriodTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDUiKitTimePeriodTests.m; sourceTree = "<group>"; };
+		C5A5CF201C583AE300D23C80 /* MDKTimePeriod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDKTimePeriod.h; sourceTree = "<group>"; };
+		C5A5CF211C583AE300D23C80 /* MDKTimePeriod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDKTimePeriod.m; sourceTree = "<group>"; };
+		C5A5CF251C58489400D23C80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C5A6E5C61B2F059B0038B0B0 /* UIFont+MDKProportional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MDKProportional.h"; sourceTree = "<group>"; };
 		C5A6E5C71B2F059B0038B0B0 /* UIFont+MDKProportional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MDKProportional.m"; sourceTree = "<group>"; };
 		C5A6E5CA1B2F09C10038B0B0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -74,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5A5CF261C58489400D23C80 /* Foundation.framework in Frameworks */,
 				C5A6E5CB1B2F09C10038B0B0 /* CoreText.framework in Frameworks */,
 				C5BC6AC019D3190C00BC1D1B /* UIKit.framework in Frameworks */,
 				C5C9A9C31C0E216100A13E59 /* Crashlytics.framework in Frameworks */,
@@ -150,6 +160,8 @@
 				C5C92C6519E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.m */,
 				C5DA47EA19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.h */,
 				C5DA47EB19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.m */,
+				C5A5CF201C583AE300D23C80 /* MDKTimePeriod.h */,
+				C5A5CF211C583AE300D23C80 /* MDKTimePeriod.m */,
 			);
 			path = MDUiKit;
 			sourceTree = "<group>";
@@ -166,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				C5BC6AB319D318E800BC1D1B /* MDUiKitTests.m */,
+				C5A5CF1D1C57E9FB00D23C80 /* MDUiKitTimePeriodTests.m */,
 				C5BC6AB119D318E800BC1D1B /* Supporting Files */,
 			);
 			path = MDUiKitTests;
@@ -182,6 +195,7 @@
 		C5BC6AC119D3193900BC1D1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5A5CF251C58489400D23C80 /* Foundation.framework */,
 				C5C9A9C21C0E216100A13E59 /* Crashlytics.framework */,
 				C5A6E5CA1B2F09C10038B0B0 /* CoreText.framework */,
 				C5BC6ABD19D3190500BC1D1B /* QuartzCore.framework */,
@@ -216,6 +230,7 @@
 				C5A6E5C81B2F059B0038B0B0 /* UIFont+MDKProportional.h in Headers */,
 				C5DA47F019EEDC6100A0A432 /* NSMutableArray+MDKConvenience.h in Headers */,
 				C53A87BE1C03E34000261120 /* MDKCelsiusToFahrenheitValueTransformer.h in Headers */,
+				C5A5CF221C583AE300D23C80 /* MDKTimePeriod.h in Headers */,
 				C5C92C6619E34AE400DB0507 /* MDKUITableViewDynamicRowHeights.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +337,7 @@
 				C5DA47ED19EEB73E00A0A432 /* UICollectionView+MDKDragAndDrop.m in Sources */,
 				C5A6E5C91B2F059B0038B0B0 /* UIFont+MDKProportional.m in Sources */,
 				C5D6EA8919DE28210098F2A9 /* MDKUICollectionViewScrollContentSized.m in Sources */,
+				C5A5CF231C583AE300D23C80 /* MDKTimePeriod.m in Sources */,
 				C5F090391A184236009ADC95 /* MDKLinePropertyControl.m in Sources */,
 				C53A87BF1C03E34000261120 /* MDKCelsiusToFahrenheitValueTransformer.m in Sources */,
 				C5C92C6319E3164800DB0507 /* MDKUICollectionViewFlowLayoutDebug.m in Sources */,
@@ -334,7 +350,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5A5CF241C583AE300D23C80 /* MDKTimePeriod.m in Sources */,
 				C53A87C01C03E34000261120 /* MDKCelsiusToFahrenheitValueTransformer.m in Sources */,
+				C5A5CF1E1C57E9FB00D23C80 /* MDUiKitTimePeriodTests.m in Sources */,
 				C5BC6AB419D318E800BC1D1B /* MDUiKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

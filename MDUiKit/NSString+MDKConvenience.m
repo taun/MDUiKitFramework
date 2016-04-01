@@ -44,8 +44,9 @@
                                                                  format: NULL
                                                                   error: &error];
     
-    if (!tempDefaults) {
-        NSLog(@"Error reading plist: %@", error);
+    if (!tempDefaults)
+    {
+        if (error) DDLogError(@"DaisySensorLog Error reading plist: %@", error);
     }
     return tempDefaults;
 }

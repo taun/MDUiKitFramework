@@ -11,12 +11,12 @@
 @implementation MDKLogFormatter
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage
 {
-    static NSString* bundleID;
+//    static NSString* bundleID;
     
-    if (!bundleID)
-    {
-        bundleID = [[NSBundle mainBundle] bundleIdentifier];
-    }
+//    if (!bundleID)
+//    {
+//        bundleID = [[NSBundle mainBundle] bundleIdentifier];
+//    }
     
     NSString* logLevel = nil;
     
@@ -28,9 +28,8 @@
         default             : logLevel = @"V"; break;
     }
     
-    return [NSString stringWithFormat:@"%@, [B %@],[T %@],[Q %@],[%@],[Line %lu],[%@],'%@'",
+    return [NSString stringWithFormat:@"%@, [T %@],[Q %@],[%@],[Line %lu],[%@],'%@'",
             logMessage.timestamp,
-            bundleID,
             logMessage.threadName,
             logMessage.queueLabel,
             logLevel,

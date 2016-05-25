@@ -62,7 +62,7 @@
             logMessage.timestamp,
             logMessage.queueLabel,
             logFlag,
-            logMessage.line,
+            (unsigned long)logMessage.line,
             logMessage.function,
             logMessage.message];
 }

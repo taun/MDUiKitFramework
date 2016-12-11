@@ -10,4 +10,6 @@
 
 @interface MDKUICollectionViewFlowLayoutDebug : UICollectionViewFlowLayout
 
+-(void)newSizeForBounds: (CGRect)bounds;
+
 @end

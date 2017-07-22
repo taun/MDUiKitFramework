@@ -1,14 +1,14 @@
 //
-//  MDKUICollectionViewFlowLayoutDebug.m
+//  MDKUICollectionViewResizingFlowLayout.m
 //  MDUiKit
 //
 //  Created by Taun Chapman on 10/06/14.
 //  Copyright (c) 2014 MOEDAE LLC. All rights reserved.
 //
 
-#import "MDKUICollectionViewFlowLayoutDebug.h"
+#import "MDKUICollectionViewResizingFlowLayout.h"
 
-@implementation MDKUICollectionViewFlowLayoutDebug
+@implementation MDKUICollectionViewResizingFlowLayout
 
 //-(void)prepareForCollectionViewUpdates:(NSArray<UICollectionViewUpdateItem *> *)updateItems
 //{
@@ -17,12 +17,16 @@
 //    [super prepareForCollectionViewUpdates:updateItems];
 //}
 
-//-(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
-//{    
-//    BOOL invalidate = [super shouldInvalidateLayoutForBoundsChange:newBounds];
-////    NSLog(@"%s returns: %i", __PRETTY_FUNCTION__, invalidate);
-//    return invalidate;
-//}
+/*!
+ With FlowLayout, invalidation for bounds change is only YES when the
+ direction orthogonal to the scroll direction is changed.
+*/
+-(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
+{    
+    BOOL invalidate = [super shouldInvalidateLayoutForBoundsChange:newBounds];
+//    NSLog(@"%s returns: %i", __PRETTY_FUNCTION__, invalidate);
+    return invalidate;
+}
 
 //-(void) invalidateLayout {
 //    [super invalidateLayout];
@@ -34,8 +38,7 @@
 //}
 
 /*!
-  With FlowLayout, invalidation for bounds change is only YES when the
-  direction orthogonal to the scroll direction is changed.
+    For some reason, does not set invalidateFlowLayoutDelegateMetrics = YES
  */
 -(UICollectionViewLayoutInvalidationContext *)invalidationContextForBoundsChange:(CGRect)newBounds
 {

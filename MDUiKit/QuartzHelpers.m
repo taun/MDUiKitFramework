@@ -96,21 +96,31 @@ CGPatternRef CreateImagePattern( CGImageRef image )
                             &callbacks);
 }
 
-CGRect CGRectAspectFitSizeInSize(CGSize sourceSize, CGSize destinationSize)
+CGRect CGRectAspectSizeInSize(CGSize sourceSize, CGSize destinationSize, bool fill)
 {
     CGRect scaledImageRect = CGRectZero;
     
     CGFloat aspectWidth = destinationSize.width / sourceSize.width;
     CGFloat aspectHeight = destinationSize.height / sourceSize.height;
-    CGFloat aspectRatio = MAX( aspectWidth, aspectHeight );
+    CGFloat aspectRatio;
+    if (fill)
+    {
+        aspectRatio = MAX( aspectWidth, aspectHeight );
+    }
+    else
+    {
+        aspectRatio = MIN( aspectWidth, aspectHeight );
+    }
     
     scaledImageRect.size.width = sourceSize.width * aspectRatio;
     scaledImageRect.size.height = sourceSize.height * aspectRatio;
     scaledImageRect.origin.x = (destinationSize.width - scaledImageRect.size.width) / 2.0f;
     scaledImageRect.origin.y = (destinationSize.height - scaledImageRect.size.height) / 2.0f;
-
+    
     return scaledImageRect;
 }
+
+
 
 //CGColorRef GetCGPatternFromUIImage( UIImage *uImage )         // can be resource name or abs. path
 //{

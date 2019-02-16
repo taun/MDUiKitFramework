@@ -17,7 +17,7 @@
 {
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(sizeToFit.width, sizeToFit.height), isOpaque, 0.0f);
     
-    [self drawInRect: CGRectAspectFitSizeInSize(self.size, sizeToFit)];
+    [self drawInRect: CGRectAspectSizeInSize(self.size, sizeToFit, true)];
     
     UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

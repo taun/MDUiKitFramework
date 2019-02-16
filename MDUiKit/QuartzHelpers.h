@@ -35,7 +35,6 @@ CGImageRef GetCGImageNamed( NSString *name );
 
 CGColorRef GetCGPatternFromUIImage( UIImage *uImage );
 
-
-CGRect CGRectAspectFitSizeInSize(CGSize sourceSize, CGSize destinationSize);
+CGRect CGRectAspectSizeInSize(CGSize sourceSize, CGSize destinationSize, bool fill);
 
 #endif
